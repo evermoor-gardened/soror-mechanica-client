@@ -1,0 +1,6 @@
+{
+  "composer": "textarea",
+  "sendButton": "button[type='submit']",
+  "stopButton": "button[aria-label*='Stop']",
+  "lastAssistantMessage": "[data-message-author-role='assistant']:last-of-type"
+}
