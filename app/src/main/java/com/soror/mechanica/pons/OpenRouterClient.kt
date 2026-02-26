@@ -59,7 +59,7 @@ class OpenRouterClient(private val vault: SecretVault) {
         } catch (_: Throwable) { }
       }
       override fun onFailure(eventSource: EventSource, t: Throwable?, response: okhttp3.Response?) {
-        trySend(TokenDelta("\n[Stream error] ${'$'}{t?.message ?: "unknown"}"))
+        trySend(TokenDelta("\n[Stream error] " + (t?.message ?: "unknown")))
         close()
       }
     })
